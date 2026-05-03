@@ -42,7 +42,7 @@ const dictionaries = {
     'faq.a2': 'Информация будет добавлена.',
     'faq.q3': 'Подарки',
     'faq.a3': 'Информация будет добавлена.',
-    'footer.signature': 'с любовью, Y & S'
+    'footer.signaturePrefix': 'с любовью, Y'
   },
   en: {
     'meta.title': 'Y & S — Wedding Invitation',
@@ -84,7 +84,7 @@ const dictionaries = {
     'faq.a2': 'Details to be added.',
     'faq.q3': 'Gifts',
     'faq.a3': 'Details to be added.',
-    'footer.signature': 'with love, Y & S'
+    'footer.signaturePrefix': 'with love, Y'
   },
   ja: {
     'meta.title': 'Y & S — 結婚式のご招待',
@@ -126,7 +126,7 @@ const dictionaries = {
     'faq.a2': '追って詳細をお知らせいたします。',
     'faq.q3': 'お祝いについて',
     'faq.a3': '追って詳細をお知らせいたします。',
-    'footer.signature': 'with love, Y & S'
+    'footer.signaturePrefix': 'with love, Y'
   },
   ko: {
     'meta.title': 'Y & S — 결혼 초대장',
@@ -168,7 +168,7 @@ const dictionaries = {
     'faq.a2': '추후 안내드리겠습니다.',
     'faq.q3': '축의금',
     'faq.a3': '추후 안내드리겠습니다.',
-    'footer.signature': 'with love, Y & S'
+    'footer.signaturePrefix': 'with love, Y'
   }
 };
 

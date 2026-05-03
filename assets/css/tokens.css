@@ -21,6 +21,7 @@
      - Noto Serif JP/KR: per-script substitutions when active language is JA/KO */
   --font-display: 'Cormorant Garamond', 'Noto Serif JP', 'Noto Serif KR', serif;
   --font-body: 'Inter', 'Noto Sans JP', 'Noto Sans KR', system-ui, sans-serif;
+  --font-script: 'Sacramento', 'Cormorant Garamond', cursive;
 
   /* Per-script overrides applied via [data-lang="ja"] / [data-lang="ko"] on <html> */
 

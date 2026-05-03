@@ -8,7 +8,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Sans+KR:wght@300;400;500&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Sans+KR:wght@300;400;500&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Serif+KR:wght@400;500;600&family=Sacramento&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/tokens.css">
@@ -27,25 +27,37 @@
 
 <!-- 1. Hero -->
 <section class="hero" id="hero">
-  <img src="assets/img/olive-sprig.svg" class="hero__sprig hero__sprig--tl" alt="">
-  <img src="assets/img/olive-sprig.svg" class="hero__sprig hero__sprig--br" alt="">
+  <img src="assets/img/olive-sprig.svg" class="hero__sprig hero__sprig--tl" alt="" aria-hidden="true">
+  <img src="assets/img/olive-sprig.svg" class="hero__sprig hero__sprig--tr" alt="" aria-hidden="true">
+  <img src="assets/img/olive-sprig.svg" class="hero__sprig hero__sprig--bl" alt="" aria-hidden="true">
+  <img src="assets/img/olive-sprig.svg" class="hero__sprig hero__sprig--br" alt="" aria-hidden="true">
   <p class="hero__eyebrow eyebrow" data-i18n="hero.saveTheDate">Save the date</p>
-  <h1 class="hero__monogram">Y<span class="amp">&amp;</span>S</h1>
-  <p class="hero__date" data-i18n="hero.date">September 12, 2026</p>
+  <h1 class="hero__monogram">Y<img src="assets/img/decor/amp.webp" class="amp-img" alt="and">S</h1>
+  <div class="hero__date" aria-hidden="true">
+    <span>12</span>
+    <span class="sep">|</span>
+    <span>09</span>
+    <span class="sep">|</span>
+    <span>26</span>
+  </div>
+  <p class="hero__date-text" data-i18n="hero.date">September 12, 2026</p>
   <p class="hero__city" data-i18n="hero.city">Osaka, Japan</p>
   <a href="#greeting" class="hero__scroll" aria-label="Scroll down">↓</a>
 </section>
 
-<!-- 2. Greeting -->
+<!-- 2. Greeting in torn-paper card (mirrors `_1_1.png.webp` reference idiom) -->
 <section class="section section--greeting reveal" id="greeting">
   <div class="container">
-    <p class="eyebrow" data-i18n="greeting.title">Dear guests</p>
-    <div class="divider"></div>
-    <p class="greeting__body" data-i18n="greeting.body">
-      We are so happy to invite you to share the day we say "yes" to each other.
-    </p>
+    <div class="torn-card">
+      <p class="script-title" data-i18n="greeting.title">Dear guests</p>
+      <p class="greeting__body" data-i18n="greeting.body">
+        We are so happy to invite you to share the day we say "yes" to each other.
+      </p>
+    </div>
   </div>
 </section>
+
+<div class="heart-divider" aria-hidden="true"><img src="assets/img/decor/heart.webp" alt=""></div>
 
 <!-- 4. Date + countdown (story §3 skipped per spec — content TBD) -->
 <section class="section section--countdown reveal" id="countdown">
@@ -72,8 +84,12 @@
   </div>
 </section>
 
+<div class="heart-divider" aria-hidden="true"><img src="assets/img/decor/heart.webp" alt=""></div>
+
 <!-- 5. Programme -->
-<section class="section section--programme reveal" id="programme">
+<section class="section section--programme section--decorated reveal" id="programme">
+  <img src="assets/img/olive-sprig.svg" class="decor decor--tl" alt="" aria-hidden="true">
+  <img src="assets/img/olive-sprig.svg" class="decor decor--br" alt="" aria-hidden="true">
   <div class="container">
     <h2 class="section__title" data-i18n="programme.title">Programme</h2>
     <ol class="programme__list">
@@ -109,6 +125,8 @@
   </div>
 </section>
 
+<div class="heart-divider" aria-hidden="true"><img src="assets/img/decor/heart.webp" alt=""></div>
+
 <!-- 6. Venue -->
 <section class="section section--venue reveal" id="venue">
   <div class="container">
@@ -127,6 +145,8 @@
   </div>
 </section>
 
+<div class="heart-divider" aria-hidden="true"><img src="assets/img/decor/heart.webp" alt=""></div>
+
 <!-- 7. Dress code -->
 <section class="section section--dress-code reveal" id="dress-code">
   <div class="container">
@@ -144,6 +164,8 @@
   </div>
 </section>
 
+<div class="heart-divider" aria-hidden="true"><img src="assets/img/decor/heart.webp" alt=""></div>
+
 <!-- 8. RSVP -->
 <section class="section section--rsvp reveal" id="rsvp">
   <div class="container">
@@ -155,6 +177,8 @@
     </p>
   </div>
 </section>
+
+<div class="heart-divider" aria-hidden="true"><img src="assets/img/decor/heart.webp" alt=""></div>
 
 <!-- 9. FAQ -->
 <section class="section section--faq reveal" id="faq">
@@ -177,9 +201,15 @@
   </div>
 </section>
 
+<div class="heart-divider" aria-hidden="true"><img src="assets/img/decor/heart.webp" alt=""></div>
+
 <!-- 10. Footer -->
 <footer class="footer reveal">
-  <p class="footer__signature" data-i18n="footer.signature">with love, Y &amp; S</p>
+  <p class="footer__signature">
+    <span data-i18n="footer.signaturePrefix">with love, Y</span>
+    <img src="assets/img/decor/amp.webp" class="amp-img" alt="and">
+    <span>S</span>
+  </p>
 </footer>
 
 <script src="assets/js/i18n.js"></script>
