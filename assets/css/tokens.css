@@ -1,0 +1,71 @@
+:root {
+  /* Palette — extracted from dress-code reference (chocolate → coffee → camel → beige → sand → sage → olive) */
+  --color-bg: #F5F0E8;
+  --color-bg-soft: #EDE5D6;
+  --color-ink: #2A1F18;
+  --color-ink-soft: #5C4332;
+  --color-brown-dark: #3D2A1E;
+  --color-brown-mid: #5C4332;
+  --color-camel: #A88766;
+  --color-beige: #C9B299;
+  --color-sand: #E5D4BC;
+  --color-sage-light: #A8B89A;
+  --color-olive: #6F7A52;
+  --color-accent: #6F7A52;
+  --color-accent-hover: #5A6442;
+  --color-divider: rgba(42, 31, 24, 0.18);
+
+  /* Typography — three font families load from Google Fonts (see <head>):
+     - Cormorant Garamond: serif for display + Cyrillic + Latin
+     - Inter: sans for body + UI
+     - Noto Serif JP/KR: per-script substitutions when active language is JA/KO */
+  --font-display: 'Cormorant Garamond', 'Noto Serif JP', 'Noto Serif KR', serif;
+  --font-body: 'Inter', 'Noto Sans JP', 'Noto Sans KR', system-ui, sans-serif;
+
+  /* Per-script overrides applied via [data-lang="ja"] / [data-lang="ko"] on <html> */
+
+  /* Type scale */
+  --fs-eyebrow: 0.75rem;     /* 12px */
+  --fs-body: 1rem;            /* 16px */
+  --fs-body-lg: 1.125rem;     /* 18px */
+  --fs-h3: 1.5rem;            /* 24px */
+  --fs-h2: clamp(1.75rem, 3vw + 1rem, 2.75rem);
+  --fs-h1: clamp(3rem, 8vw + 1rem, 6rem);
+  --fs-monogram: clamp(4.5rem, 14vw + 1rem, 9rem);
+
+  --tracking-wide: 0.2em;
+  --tracking-display: 0.04em;
+
+  /* Spacing scale (4px base) */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-6: 1.5rem;
+  --sp-8: 2rem;
+  --sp-12: 3rem;
+  --sp-16: 4rem;
+  --sp-24: 6rem;
+  --sp-32: 8rem;
+
+  /* Layout */
+  --content-max: 720px;
+  --section-py: clamp(4rem, 10vw, 8rem);
+
+  /* Radii + motion */
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-pill: 999px;
+  --ease-out: cubic-bezier(0.19, 1, 0.22, 1);
+  --duration-fast: 200ms;
+  --duration-med: 600ms;
+}
+
+html[data-lang="ja"] {
+  --font-display: 'Noto Serif JP', 'Cormorant Garamond', serif;
+  --font-body: 'Noto Sans JP', 'Inter', system-ui, sans-serif;
+}
+html[data-lang="ko"] {
+  --font-display: 'Noto Serif KR', 'Cormorant Garamond', serif;
+  --font-body: 'Noto Sans KR', 'Inter', system-ui, sans-serif;
+}

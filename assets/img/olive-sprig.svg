@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+  <!-- Stem -->
+  <path d="M30 30 Q 70 70, 110 100 T 175 170" stroke="#6F7A52" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+  <!-- Leaves: ellipses placed along the curve, alternating sides, varied sizes -->
+  <g fill="#A8B89A" opacity="0.85">
+    <ellipse cx="50"  cy="42"  rx="14" ry="6" transform="rotate(35 50 42)"/>
+    <ellipse cx="62"  cy="58"  rx="13" ry="5" transform="rotate(-25 62 58)"/>
+    <ellipse cx="78"  cy="74"  rx="16" ry="6.5" transform="rotate(40 78 74)"/>
+    <ellipse cx="92"  cy="92"  rx="14" ry="6" transform="rotate(-20 92 92)"/>
+    <ellipse cx="112" cy="108" rx="17" ry="7" transform="rotate(45 112 108)"/>
+    <ellipse cx="128" cy="128" rx="14" ry="6" transform="rotate(-18 128 128)"/>
+    <ellipse cx="148" cy="144" rx="18" ry="7" transform="rotate(48 148 144)"/>
+    <ellipse cx="162" cy="160" rx="13" ry="5.5" transform="rotate(-22 162 160)"/>
+  </g>
+  <g fill="#6F7A52" opacity="0.6">
+    <ellipse cx="55"  cy="50"  rx="10" ry="4" transform="rotate(-50 55 50)"/>
+    <ellipse cx="86"  cy="84"  rx="11" ry="4.5" transform="rotate(-55 86 84)"/>
+    <ellipse cx="120" cy="118" rx="11" ry="4.5" transform="rotate(-50 120 118)"/>
+    <ellipse cx="155" cy="152" rx="10" ry="4" transform="rotate(-50 155 152)"/>
+  </g>
+  <!-- Tiny olive fruits -->
+  <g fill="#5C4332" opacity="0.7">
+    <circle cx="70" cy="68" r="3"/>
+    <circle cx="105" cy="105" r="3.2"/>
+    <circle cx="142" cy="140" r="3"/>
+  </g>
+</svg>
