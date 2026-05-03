@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git init *)",
+      "Bash(python -m http.server 8765)",
+      "Bash(curl -s -o NUL -w \"index: %{http_code}\\\\n\" http://localhost:8765/)",
+      "Bash(curl -s -o NUL -w \"css/styles.css: %{http_code}\\\\n\" http://localhost:8765/assets/css/styles.css)",
+      "Bash(curl -s -o NUL -w \"js/i18n.js: %{http_code}\\\\n\" http://localhost:8765/assets/js/i18n.js)",
+      "Bash(curl -s -o NUL -w \"js/countdown.js: %{http_code}\\\\n\" http://localhost:8765/assets/js/countdown.js)",
+      "Bash(curl -s -o NUL -w \"js/reveal.js: %{http_code}\\\\n\" http://localhost:8765/assets/js/reveal.js)",
+      "Bash(python -c ' *)",
+      "PowerShell($p = \\(Get-NetTCPConnection -LocalPort 8765 -ErrorAction SilentlyContinue\\).OwningProcess; if \\($p\\) { Stop-Process -Id $p -Force; \"Stopped $p\" } else { \"Not running\" })",
+      "Bash(curl -s -o /dev/null -w '%{http_code}' http://localhost:8765__TRACKED_VAR__)",
+      "PowerShell($p = \\(Get-NetTCPConnection -LocalPort 8765 -ErrorAction SilentlyContinue\\).OwningProcess; if \\($p\\) { Stop-Process -Id $p -Force })",
+      "Bash(git rm *)",
+      "Bash(git commit -m 'Adapt visual elements from Lemon reference: hand-script ampersand, torn-paper greeting card, heart-outline section dividers, vertical-bar date format, Sacramento font for programme times *)",
+      "PowerShell(python --version)",
+      "PowerShell(pip --version)",
+      "PowerShell(pip install --quiet playwright)",
+      "PowerShell(python -m playwright install chromium)",
+      "PowerShell(python tools/site_dumper/dump.py https://finca-demo.thedigitalyes.com/ tools/site_dumper/dumps/finca --max-pages 50 --media-seconds 6)",
+      "PowerShell(python tools/site_dumper/serve.py tools/site_dumper/dumps/finca --port 8765)",
+      "PowerShell($r = Invoke-WebRequest -Uri http://127.0.0.1:8765/ -UseBasicParsing; \"Status: $\\($r.StatusCode\\)\"; \"Content-Type: $\\($r.Headers['Content-Type']\\)\"; \"Length: $\\($r.RawContentLength\\)\"; \"First 400 chars:\"; $r.Content.Substring\\(0, [Math]::Min\\(400, $r.Content.Length\\)\\))",
+      "Bash(kill bwdl9f13b *)",
+      "PowerShell(python tools/site_dumper/smoke_test.py http://127.0.0.1:8765/)",
+      "PowerShell($env:PYTHONIOENCODING=\"utf-8\"; python tools/site_dumper/dump.py https://finca-demo.thedigitalyes.com/ tools/site_dumper/dumps/finca --media-seconds 8 --scroll-passes 4)",
+      "PowerShell($env:PYTHONIOENCODING=\"utf-8\"; python tools/site_dumper/serve.py tools/site_dumper/dumps/finca --port 8765)",
+      "PowerShell($env:PYTHONIOENCODING=\"utf-8\"; python tools/site_dumper/smoke_test.py http://127.0.0.1:8765/)"
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="./" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Свадьба Екатерина &amp; Сынтек — 27.08.2026</title>
+    <meta name="description" content="Приглашение на свадьбу Екатерины и Сынтека — 27 августа 2026, Бали">
+    
+
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <meta property="og:title" content="Свадьба Екатерина & Сынтек">
+  <meta name="twitter:title" content="Свадьба Екатерина & Сынтек">
+  <meta property="og:description" content="27 августа 2026 · Бали">
+  <meta name="twitter:description" content="27 августа 2026 · Бали">
+  <script>
+(function(){
+  const isSb = u => /supabase\.(co|invalid)/.test(String(u||''));
+  const ok = (body) => new Response(JSON.stringify(body), {status:200, headers:{'Content-Type':'application/json'}});
+  const orig = window.fetch.bind(window);
+  window.fetch = function(url, opts){
+    const u = (url && url.url) || url;
+    if (isSb(u)) {
+      const path = String(u);
+      // Auth session/user endpoints: return null user so app proceeds as logged-out
+      if (/\/auth\/v1\/(user|session|token)/.test(path)) {
+        return Promise.resolve(ok({user:null, session:null, access_token:null, expires_in:0}));
+      }
+      // Realtime / database reads/writes: return empty array or empty object
+      const method = (opts && opts.method) || 'GET';
+      if (method === 'GET' || method === 'HEAD') return Promise.resolve(ok([]));
+      // POST/PATCH/PUT/DELETE: pretend success with empty payload
+      return Promise.resolve(ok({}));
+    }
+    return orig(url, opts);
+  };
+  const OrigWS = window.WebSocket;
+  function FakeWS(url){
+    if (isSb(url)) {
+      const ws = {readyState:3, close:()=>{}, send:()=>{}, addEventListener:()=>{}, removeEventListener:()=>{}};
+      return ws;
+    }
+    return new OrigWS(url);
+  }
+  FakeWS.CONNECTING=0; FakeWS.OPEN=1; FakeWS.CLOSING=2; FakeWS.CLOSED=3;
+  window.WebSocket = FakeWS;
+})();
+</script>
+  <script type="module" crossorigin src="assets/index-qVJvNLqG.js"></script>
+  <link rel="stylesheet" crossorigin href="assets/index-BfR7gCfE.css">
+</head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

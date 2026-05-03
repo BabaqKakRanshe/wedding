@@ -1,7 +1,17 @@
-.DS_Store
-Thumbs.db
-*.log
+# Editor / OS
 .vscode/
 .idea/
-.claude/
+.DS_Store
+Thumbs.db
+
+# Backups created during patching
+*.bak
+
+# site_dumper raw dumps (large reference material, regenerable)
+tools/site_dumper/dumps/
+
+# Local env
+.env
+.env.local
 node_modules/
+dist/

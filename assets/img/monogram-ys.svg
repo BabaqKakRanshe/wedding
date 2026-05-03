@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" aria-hidden="true">
-  <g font-family="'Cormorant Garamond', serif" font-style="italic" text-anchor="middle">
-    <text x="80" y="130" font-size="140" fill="#3D2A1E" font-weight="500">Y</text>
-    <text x="150" y="130" font-size="100" fill="#6F7A52" font-weight="400">&amp;</text>
-    <text x="220" y="130" font-size="140" fill="#3D2A1E" font-weight="500">S</text>
-  </g>
-  <!-- Underline flourish -->
-  <path d="M 60 155 Q 150 175, 240 155" stroke="#A88766" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6"/>
-</svg>
