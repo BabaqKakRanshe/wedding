@@ -1,0 +1,298 @@
+{
+  "start_url": "https://finca-demo.thedigitalyes.com/",
+  "origin": "finca-demo.thedigitalyes.com",
+  "scheme": "https",
+  "pages_visited": [
+    "https://finca-demo.thedigitalyes.com/"
+  ],
+  "responses": {
+    "https://finca-demo.thedigitalyes.com/": {
+      "local": "finca-demo.thedigitalyes.com/index.html",
+      "status": 200,
+      "content_type": "text/html",
+      "size": 1589
+    },
+    "https://finca-demo.thedigitalyes.com/~flock.js": {
+      "local": "finca-demo.thedigitalyes.com/~flock.js",
+      "status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "size": 21296
+    },
+    "https://finca-demo.thedigitalyes.com/assets/index-BfR7gCfE.css": {
+      "local": "finca-demo.thedigitalyes.com/assets/index-BfR7gCfE.css",
+      "status": 200,
+      "content_type": "text/css",
+      "size": 70714
+    },
+    "https://finca-demo.thedigitalyes.com/assets/index-qVJvNLqG.js": {
+      "local": "finca-demo.thedigitalyes.com/assets/index-qVJvNLqG.js",
+      "status": 200,
+      "content_type": "text/javascript",
+      "size": 717150
+    },
+    "https://fnxrywnvgxcudpfrnlum.supabase.co/rest/v1/wedding_settings?select=*": {
+      "local": "fnxrywnvgxcudpfrnlum.supabase.co/rest/v1/wedding_settings__q__a59e1559",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "size": 1029
+    },
+    "https://finca-demo.thedigitalyes.com/assets/watermark-CS4rvcxG.png": {
+      "local": "finca-demo.thedigitalyes.com/assets/watermark-CS4rvcxG.png",
+      "status": 200,
+      "content_type": "image/png",
+      "size": 367090
+    },
+    "https://finca-demo.thedigitalyes.com/assets/intro-poster-BQrMtd4k.png": {
+      "local": "finca-demo.thedigitalyes.com/assets/intro-poster-BQrMtd4k.png",
+      "status": 200,
+      "content_type": "image/png",
+      "size": 2919695
+    },
+    "https://finca-demo.thedigitalyes.com/assets/intro-video-BpkZMtTn.mov": {
+      "local": "finca-demo.thedigitalyes.com/assets/intro-video-BpkZMtTn.mov",
+      "status": 200,
+      "content_type": "video/quicktime",
+      "size": 4982477
+    },
+    "https://finca-demo.thedigitalyes.com/assets/intro-music-CzqJOUtA.mp3": {
+      "local": "finca-demo.thedigitalyes.com/assets/intro-music-CzqJOUtA.mp3",
+      "status": 200,
+      "content_type": "audio/mpeg",
+      "size": 2872335
+    },
+    "https://fnxrywnvgxcudpfrnlum.supabase.co/rest/v1/accommodations?select=*&order=sort_order.asc": {
+      "local": "fnxrywnvgxcudpfrnlum.supabase.co/rest/v1/accommodations__q__c1edd5e4",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "size": 584
+    },
+    "https://fnxrywnvgxcudpfrnlum.supabase.co/rest/v1/faqs?select=*&order=sort_order.asc": {
+      "local": "fnxrywnvgxcudpfrnlum.supabase.co/rest/v1/faqs__q__c1edd5e4",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "size": 1076
+    },
+    "https://finca-demo.thedigitalyes.com/assets/hero-illustration-DrhagIJw.png": {
+      "local": "finca-demo.thedigitalyes.com/assets/hero-illustration-DrhagIJw.png",
+      "status": 200,
+      "content_type": "image/png",
+      "size": 2778301
+    },
+    "https://finca-demo.thedigitalyes.com/assets/finca-biniagual-tpK1hn9e.webp": {
+      "local": "finca-demo.thedigitalyes.com/assets/finca-biniagual-tpK1hn9e.webp",
+      "status": 200,
+      "content_type": "image/webp",
+      "size": 366570
+    },
+    "https://finca-demo.thedigitalyes.com/assets/champagne-illustration-CplOg0Lb.png": {
+      "local": "finca-demo.thedigitalyes.com/assets/champagne-illustration-CplOg0Lb.png",
+      "status": 200,
+      "content_type": "image/png",
+      "size": 89994
+    },
+    "https://finca-demo.thedigitalyes.com/assets/party-illustration-CKNDNV2q.png": {
+      "local": "finca-demo.thedigitalyes.com/assets/party-illustration-CKNDNV2q.png",
+      "status": 200,
+      "content_type": "image/png",
+      "size": 1894312
+    },
+    "https://finca-demo.thedigitalyes.com/assets/rings-illustration-tO3OeALU.png": {
+      "local": "finca-demo.thedigitalyes.com/assets/rings-illustration-tO3OeALU.png",
+      "status": 200,
+      "content_type": "image/png",
+      "size": 329243
+    },
+    "https://www.google.com/maps/embed?origin=mfe&pb=!1m2!2m1!1sFinca+Biniagual": {
+      "local": "www.google.com/maps/embed__q__7a412098.html",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "size": 3574
+    },
+    "https://finca-demo.thedigitalyes.com/assets/intro-video-BSNlV4m4.webm": {
+      "local": "finca-demo.thedigitalyes.com/assets/intro-video-BSNlV4m4.webm",
+      "status": 200,
+      "content_type": "video/webm",
+      "size": 4621374
+    },
+    "https://maps.googleapis.com/maps/api/js?key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&paint_origin=&libraries=geometry,search&v=weekly&loading=async&language=en_US&callback=onApiLoad": {
+      "local": "maps.googleapis.com/maps/api/js__q__323213f1",
+      "status": 200,
+      "content_type": "text/javascript; charset=UTF-8",
+      "size": 12916
+    },
+    "https://maps.googleapis.com/maps-api-v3/api/js/64/11d/geometry.js": {
+      "local": "maps.googleapis.com/maps-api-v3/api/js/64/11d/geometry.js",
+      "status": 200,
+      "content_type": "text/javascript",
+      "size": 6968
+    },
+    "https://maps.googleapis.com/maps-api-v3/api/js/64/11d/search.js": {
+      "local": "maps.googleapis.com/maps-api-v3/api/js/64/11d/search.js",
+      "status": 200,
+      "content_type": "text/javascript",
+      "size": 2621
+    },
+    "https://maps.gstatic.com/maps-api-v3/embed/js/64/11d/init_embed.js": {
+      "local": "maps.gstatic.com/maps-api-v3/embed/js/64/11d/init_embed.js",
+      "status": 200,
+      "content_type": "text/javascript",
+      "size": 245680
+    },
+    "https://maps.googleapis.com/maps-api-v3/api/js/64/11d/main.js": {
+      "local": "maps.googleapis.com/maps-api-v3/api/js/64/11d/main.js",
+      "status": 200,
+      "content_type": "text/javascript",
+      "size": 299857
+    },
+    "https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true": {
+      "local": "maps.googleapis.com/maps/api/mapsjs/gen_204__q__e86b9bbe",
+      "status": 200,
+      "content_type": "application/json; charset=UTF-8",
+      "size": 3
+    },
+    "https://maps.googleapis.com/maps-api-v3/api/js/64/11d/onion.js": {
+      "local": "maps.googleapis.com/maps-api-v3/api/js/64/11d/onion.js",
+      "status": 200,
+      "content_type": "text/javascript",
+      "size": 30892
+    },
+    "https://maps.googleapis.com/maps-api-v3/api/js/64/11d/map.js": {
+      "local": "maps.googleapis.com/maps-api-v3/api/js/64/11d/map.js",
+      "status": 200,
+      "content_type": "text/javascript",
+      "size": 81205
+    },
+    "https://maps.googleapis.com/maps-api-v3/api/js/64/11d/common.js": {
+      "local": "maps.googleapis.com/maps-api-v3/api/js/64/11d/common.js",
+      "status": 200,
+      "content_type": "text/javascript",
+      "size": 126551
+    },
+    "https://maps.googleapis.com/maps/api/js/StaticMapService.GetMapImage?1m2&1i4260900&2i3185771&2e1&3u15&4m2&1u796&2u200&5m6&1e0&5sen-US&6sus&10b1&12b1&14i47083502&8e1&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=19103": {
+      "local": "maps.googleapis.com/maps/api/js/StaticMapService.GetMapImage__q__1042d9aa",
+      "status": 200,
+      "content_type": "image/png",
+      "size": 8475
+    },
+    "https://maps.googleapis.com/maps-api-v3/api/js/64/11d/places.js": {
+      "local": "maps.googleapis.com/maps-api-v3/api/js/64/11d/places.js",
+      "status": 200,
+      "content_type": "text/javascript",
+      "size": 369116
+    },
+    "https://maps.googleapis.com/maps-api-v3/api/js/64/11d/search_impl.js": {
+      "local": "maps.googleapis.com/maps-api-v3/api/js/64/11d/search_impl.js",
+      "status": 200,
+      "content_type": "text/javascript",
+      "size": 3568
+    },
+    "https://maps.googleapis.com/maps-api-v3/api/js/64/11d/util.js": {
+      "local": "maps.googleapis.com/maps-api-v3/api/js/64/11d/util.js",
+      "status": 200,
+      "content_type": "text/javascript",
+      "size": 309477
+    },
+    "https://maps.gstatic.com/mapfiles/openhand_8_8.cur": {
+      "local": "maps.gstatic.com/mapfiles/openhand_8_8.cur",
+      "status": 200,
+      "content_type": "image/bmp",
+      "size": 326
+    },
+    "https://maps.googleapis.com/maps-api-v3/api/js/64/11d/log.js": {
+      "local": "maps.googleapis.com/maps-api-v3/api/js/64/11d/log.js",
+      "status": 200,
+      "content_type": "text/javascript",
+      "size": 28320
+    },
+    "https://maps.googleapis.com/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/GetViewportInfo": {
+      "local": "maps.googleapis.com/$rpc/google.internal.maps.mapsjs.v1.MapsJsInternalService/GetViewportInfo",
+      "status": 200,
+      "content_type": "application/json+protobuf; charset=UTF-8",
+      "size": 20195
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i16645!3i12445!4i256!2m3!1e0!2sm!3i777540860!2m3!1e2!2sspotlit!5i1!3m13!2sen-US!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m14!299174093m13!14m12!1m8!1m2!1y1339758067193117397!2y16368423254350644521!2s%2Fg%2F11cn9ydhjt!4m2!1x396665451!2x28750857!15sgcid%3Awinery!2b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=32345": {
+      "local": "www.google.com/maps/vt__q__e1cb171e",
+      "status": 200,
+      "content_type": "image/webp",
+      "size": 4166
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i16645!3i12444!4i256!2m3!1e0!2sm!3i777540860!2m3!1e2!2sspotlit!5i1!3m13!2sen-US!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m14!299174093m13!14m12!1m8!1m2!1y1339758067193117397!2y16368423254350644521!2s%2Fg%2F11cn9ydhjt!4m2!1x396665451!2x28750857!15sgcid%3Awinery!2b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=128189": {
+      "local": "www.google.com/maps/vt__q__8c01f47e",
+      "status": 200,
+      "content_type": "image/webp",
+      "size": 3926
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i16644!3i12445!4i256!2m3!1e0!2sm!3i777540860!2m3!1e2!2sspotlit!5i1!3m13!2sen-US!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m14!299174093m13!14m12!1m8!1m2!1y1339758067193117397!2y16368423254350644521!2s%2Fg%2F11cn9ydhjt!4m2!1x396665451!2x28750857!15sgcid%3Awinery!2b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=80542": {
+      "local": "www.google.com/maps/vt__q__6ada8382",
+      "status": 200,
+      "content_type": "image/webp",
+      "size": 4352
+    },
+    "https://www.google.com/maps/vt?pb=!1m4!1m3!1i15!2i16644!3i12444!1m4!1m3!1i15!2i16644!3i12445!1m4!1m3!1i15!2i16645!3i12444!1m4!1m3!1i15!2i16645!3i12445!1m4!1m3!1i15!2i16646!3i12444!1m4!1m3!1i15!2i16646!3i12445!1m4!1m3!1i15!2i16647!3i12444!1m4!1m3!1i15!2i16647!3i12445!2m3!1e0!2sm!3i777541676!2m3!1e2!2sspotlit!5i1!3m13!2sen-US!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e3!12m2!5b1!6b1!27m14!299174093m13!14m12!1m8!1m2!1y1339758067193117397!2y16368423254350644521!2s%2Fg%2F11cn9ydhjt!4m2!1x396665451!2x28750857!15sgcid%3Awinery!2b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=98534": {
+      "local": "www.google.com/maps/vt__q__031e08c9",
+      "status": 200,
+      "content_type": "application/json",
+      "size": 7291
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i16644!3i12444!4i256!2m3!1e0!2sm!3i777541113!2m3!1e2!2sspotlit!5i1!3m13!2sen-US!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m14!299174093m13!14m12!1m8!1m2!1y1339758067193117397!2y16368423254350644521!2s%2Fg%2F11cn9ydhjt!4m2!1x396665451!2x28750857!15sgcid%3Awinery!2b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=74884": {
+      "local": "www.google.com/maps/vt__q__a96793b5",
+      "status": 200,
+      "content_type": "image/webp",
+      "size": 4646
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i16647!3i12444!4i256!2m3!1e0!2sm!3i777540860!2m3!1e2!2sspotlit!5i1!3m13!2sen-US!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m14!299174093m13!14m12!1m8!1m2!1y1339758067193117397!2y16368423254350644521!2s%2Fg%2F11cn9ydhjt!4m2!1x396665451!2x28750857!15sgcid%3Awinery!2b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=31795": {
+      "local": "www.google.com/maps/vt__q__38be3f3e",
+      "status": 200,
+      "content_type": "image/webp",
+      "size": 2674
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i16646!3i12445!4i256!2m3!1e0!2sm!3i777541460!2m3!1e2!2sspotlit!5i1!3m13!2sen-US!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m14!299174093m13!14m12!1m8!1m2!1y1339758067193117397!2y16368423254350644521!2s%2Fg%2F11cn9ydhjt!4m2!1x396665451!2x28750857!15sgcid%3Awinery!2b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=22079": {
+      "local": "www.google.com/maps/vt__q__848ed31c",
+      "status": 200,
+      "content_type": "image/webp",
+      "size": 4406
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i16646!3i12444!4i256!2m3!1e0!2sm!3i777540860!2m3!1e2!2sspotlit!5i1!3m13!2sen-US!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m14!299174093m13!14m12!1m8!1m2!1y1339758067193117397!2y16368423254350644521!2s%2Fg%2F11cn9ydhjt!4m2!1x396665451!2x28750857!15sgcid%3Awinery!2b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=79992": {
+      "local": "www.google.com/maps/vt__q__a3acebef",
+      "status": 200,
+      "content_type": "image/webp",
+      "size": 2522
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i15!2i16647!3i12445!4i256!2m3!1e0!2sm!3i777541460!2m3!1e2!2sspotlit!5i1!3m13!2sen-US!3sUS!5e289!12m5!1e68!2m2!1sset!2sRoadmap!4e2!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!1e3!23i47083502!27m14!299174093m13!14m12!1m8!1m2!1y1339758067193117397!2y16368423254350644521!2s%2Fg%2F11cn9ydhjt!4m2!1x396665451!2x28750857!15sgcid%3Awinery!2b0!6b0!8b0&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=104953": {
+      "local": "www.google.com/maps/vt__q__62aea23c",
+      "status": 200,
+      "content_type": "image/webp",
+      "size": 3108
+    },
+    "https://maps.googleapis.com/maps-api-v3/api/js/64/11d/controls.js": {
+      "local": "maps.googleapis.com/maps-api-v3/api/js/64/11d/controls.js",
+      "status": 200,
+      "content_type": "text/javascript",
+      "size": 102461
+    },
+    "https://fonts.googleapis.com/css?family=Google+Sans+Text:400&text=%E2%86%90%E2%86%92%E2%86%91%E2%86%93&lang=en": {
+      "local": "fonts.googleapis.com/css__q__8b50c922",
+      "status": 200,
+      "content_type": "text/css; charset=utf-8",
+      "size": 237
+    },
+    "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700|Google+Sans+Text:400,500,700&lang=en": {
+      "local": "fonts.googleapis.com/css__q__7e5eb1cd",
+      "status": 200,
+      "content_type": "text/css; charset=utf-8",
+      "size": 82653
+    },
+    "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2": {
+      "local": "fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2",
+      "status": 200,
+      "content_type": "font/woff2",
+      "size": 43136
+    },
+    "https://www.google.com/maps/vt?pb=!1m5!1m4!1i13!2i4161!3i3111!4i256!2m1!1e1!3m12!2sen-US!3sUS!5e289!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy5lOmx8cC52Om9mZg!4e0!5m1!1e3!23i47083502&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=74327": {
+      "local": "www.google.com/maps/vt__q__460dad66",
+      "status": 200,
+      "content_type": "image/jpeg",
+      "size": 18409
+    }
+  }
+}
