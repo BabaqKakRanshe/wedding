@@ -133,8 +133,6 @@ function LangSwitcher({ lang, setLang, className = "lang-switcher" }) {
 function AudioToggle({ lang, t, started }) {
   const audioRef = useRef(null);
   const [playing, setPlaying] = useState(false);
-  // Lock track to the language at start time so it doesn't swap mid-listen
-  const [trackLang] = useState(lang);
 
   useEffect(() => {
     if (!audioRef.current) return;
@@ -147,6 +145,17 @@ function AudioToggle({ lang, t, started }) {
     audioRef.current.play().then(() => setPlaying(true)).catch(() => {});
   }, [started]);
 
+  // Swap track when language changes; preserve play/pause state
+  useEffect(() => {
+    const el = audioRef.current;
+    if (!el) return;
+    const wasPlaying = playing;
+    el.load();
+    if (wasPlaying) {
+      el.play().then(() => setPlaying(true)).catch(() => setPlaying(false));
+    }
+  }, [lang]);
+
   const toggle = () => {
     if (!audioRef.current) return;
     if (playing) { audioRef.current.pause(); setPlaying(false); }
@@ -155,7 +164,7 @@ function AudioToggle({ lang, t, started }) {
 
   return (
     <>
-      <audio ref={audioRef} src={`assets/music-${trackLang}.mp3`} loop preload="auto" />
+      <audio ref={audioRef} src={`assets/music-${lang}.mp3`} loop preload="auto" />
       <button
         className={"audio-toggle" + (playing ? " playing" : "")}
         onClick={toggle}
