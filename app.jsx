@@ -195,9 +195,11 @@ function Greeting({ t }) {
           </div>
           <div className="greeting-text reveal">
             <div className="eyebrow">{t.greetingEyebrow}</div>
-            <h2 style={{ marginTop: "1rem" }}>{t.greetingTitle}</h2>
-            <HeartDivider color="var(--sage)" style={{ marginBottom: "1.5rem", marginTop: "0.5rem" }} />
-            <p>{t.greetingText}</p>
+            {t.greetingTitle && <h2 style={{ marginTop: "1rem" }}>{t.greetingTitle}</h2>}
+            <HeartDivider color="var(--sage)" style={{ marginBottom: "1.5rem", marginTop: t.greetingTitle ? "0.5rem" : "1.5rem" }} />
+            {t.greetingText.split("\n\n").map((para, i) => (
+              <p key={i}>{para}</p>
+            ))}
           </div>
         </div>
       </div>
@@ -349,8 +351,11 @@ function Venue({ t }) {
 
         <div className="venue-image reveal">
           <div className="venue-sketch-placeholder">
-            <Frangipani size={80} color="var(--terra-soft)" />
-            <div className="venue-sketch-note">эскиз виллы</div>
+            <div className="venue-sketch-deco" aria-hidden>
+              <PalmFrond size={140} color="var(--sage)" />
+            </div>
+            <Frangipani size={120} color="var(--terra-soft)" />
+            <div className="venue-sketch-note">эскиз виллы скоро появится</div>
           </div>
         </div>
       </div>
@@ -603,7 +608,9 @@ function Closing({ t }) {
     <section className="note-section closing">
       <div className="container reveal">
         <div className="eyebrow">{t.closingEyebrow}</div>
-        <p>«{t.closingText}»</p>
+        {t.closingText.split("\n\n").map((para, i) => (
+          <p key={i}>{para}</p>
+        ))}
         <HeartDivider color="var(--sage)" style={{ margin: "2rem auto 1rem" }} />
         <div style={{
           fontFamily: "var(--display)", fontStyle: "italic",
@@ -713,7 +720,6 @@ function App() {
       <BleedQuote t={t} photo="IMG_0556.JPG" quote={t.quote1} attr={t.quote1Attr} />
       <Countdown t={t} />
       <Schedule t={t} />
-      <BleedQuote t={t} photo="IMG_0568.JPG" quote={`«${t.coverSubline}»`} attr={t.coverPlace} />
       <Venue t={t} />
       <DressCode t={t} />
       <Carousel t={t} />

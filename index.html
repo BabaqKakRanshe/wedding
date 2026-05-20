@@ -785,19 +785,30 @@ html:lang(ja) .venue-transfer, html:lang(ko) .venue-transfer {
 
 .venue-image {
   position: relative;
-  height: 520px;
+  height: 460px;
   overflow: hidden;
   border-radius: 2px;
-  box-shadow: 0 24px 60px rgba(46,42,34,0.2);
+  box-shadow: 0 24px 60px rgba(46,42,34,0.18);
 }
 .venue-sketch-placeholder {
   position: absolute; inset: 0;
-  background: linear-gradient(135deg, var(--paper) 0%, var(--paper-deep) 100%);
+  background:
+    radial-gradient(circle at 30% 20%, rgba(143,163,122,0.10) 0, transparent 55%),
+    radial-gradient(circle at 70% 80%, rgba(199,123,91,0.08) 0, transparent 55%),
+    linear-gradient(135deg, var(--paper) 0%, var(--paper-deep) 100%);
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
-  gap: 1.5rem;
+  gap: 1.25rem;
   color: var(--ink-mute);
   border: 1px dashed var(--line);
+}
+.venue-sketch-deco {
+  position: absolute;
+  top: 30px; right: 30px;
+  opacity: 0.28;
+  transform: rotate(20deg);
+  color: var(--sage);
+  pointer-events: none;
 }
 .venue-sketch-note {
   font-family: var(--sans);
@@ -805,7 +816,7 @@ html:lang(ja) .venue-transfer, html:lang(ko) .venue-transfer {
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--ink-mute);
-  opacity: 0.6;
+  opacity: 0.55;
 }
 
 /* ============================ DRESS CODE ============================ */
