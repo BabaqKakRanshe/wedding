@@ -49,12 +49,13 @@ function useReveal() {
 // ============================================================
 // Envelope opening overlay
 // ============================================================
-function Envelope({ t, onOpen }) {
+function Envelope({ t, onOpen, onUserGesture }) {
   const [opening, setOpening] = useState(false);
   const [gone, setGone] = useState(false);
 
   const handleClick = () => {
     if (opening) return;
+    if (onUserGesture) onUserGesture();
     setOpening(true);
     setTimeout(() => {
       setGone(true);
@@ -90,7 +91,7 @@ function Envelope({ t, onOpen }) {
         </div>
         <div className="env-flap" />
         <div className="env-seal">
-          E<span style={{ fontSize: "0.7em", margin: "0 2px", opacity: 0.7 }}>&amp;</span>S
+          Y<span style={{ fontSize: "0.7em", margin: "0 2px", opacity: 0.7 }}>&amp;</span>S
         </div>
       </div>
 
@@ -128,52 +129,18 @@ function LangSwitcher({ lang, setLang, className = "lang-switcher" }) {
 }
 
 // ============================================================
-// Audio toggle (locale-aware)
+// Audio toggle button (the <audio> element lives in App)
 // ============================================================
-function AudioToggle({ lang, t, started }) {
-  const audioRef = useRef(null);
-  const [playing, setPlaying] = useState(false);
-
-  useEffect(() => {
-    if (!audioRef.current) return;
-    audioRef.current.volume = 0.45;
-  }, []);
-
-  // Try to auto-start once envelope is opened (user gesture qualifies)
-  useEffect(() => {
-    if (!started || !audioRef.current) return;
-    audioRef.current.play().then(() => setPlaying(true)).catch(() => {});
-  }, [started]);
-
-  // Swap track when language changes; preserve play/pause state
-  useEffect(() => {
-    const el = audioRef.current;
-    if (!el) return;
-    const wasPlaying = playing;
-    el.load();
-    if (wasPlaying) {
-      el.play().then(() => setPlaying(true)).catch(() => setPlaying(false));
-    }
-  }, [lang]);
-
-  const toggle = () => {
-    if (!audioRef.current) return;
-    if (playing) { audioRef.current.pause(); setPlaying(false); }
-    else { audioRef.current.play().then(() => setPlaying(true)).catch(() => {}); }
-  };
-
+function AudioToggle({ playing, onToggle, t }) {
   return (
-    <>
-      <audio ref={audioRef} src={`assets/music-${lang}.mp3`} loop preload="auto" />
-      <button
-        className={"audio-toggle" + (playing ? " playing" : "")}
-        onClick={toggle}
-        aria-label={playing ? t.audioOff : t.audioOn}
-        title={playing ? t.audioOff : t.audioOn}
-      >
-        <SoundIcon on={playing} size={20} />
-      </button>
-    </>
+    <button
+      className={"audio-toggle" + (playing ? " playing" : "")}
+      onClick={onToggle}
+      aria-label={playing ? t.audioOff : t.audioOn}
+      title={playing ? t.audioOff : t.audioOn}
+    >
+      <SoundIcon on={playing} size={20} />
+    </button>
   );
 }
 
@@ -381,20 +348,9 @@ function Venue({ t }) {
         </div>
 
         <div className="venue-image reveal">
-          <div className="map-frame">
-            <iframe
-              title="The Cove Bali map"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=114.94%2C-8.62%2C115.04%2C-8.52&amp;layer=mapnik&amp;marker=-8.57%2C114.99"
-              loading="lazy"
-            />
-          </div>
-          <div className="map-pin">
-            <MapPin size={56} color="var(--terra)" />
-          </div>
-          <div className="venue-stamp">
-            <div>{t.venueStampLine1}</div>
-            <div className="big">{t.venueStampBig}</div>
-            <div>8.57°S · 114.99°E</div>
+          <div className="venue-sketch-placeholder">
+            <Frangipani size={80} color="var(--terra-soft)" />
+            <div className="venue-sketch-note">эскиз виллы</div>
           </div>
         </div>
       </div>
@@ -412,12 +368,12 @@ function DressCode({ t }) {
         <div className="dress-photo reveal" />
         <div className="dress-text reveal">
           <div className="eyebrow">{t.dressEyebrow}</div>
-          <h2 style={{ fontStyle: "italic" }}>{t.dressTitle}</h2>
+          {t.dressTitle && <h2 style={{ fontStyle: "italic" }}>{t.dressTitle}</h2>}
           <HeartDivider color="var(--sage)" style={{ marginTop: "1.5rem", marginBottom: "2rem", marginLeft: 0 }} />
           <p>{t.dressText}</p>
           <div className="palette">
             {SWATCHES.map((s, i) => (
-              <div key={i} className="swatch" style={{ background: s.hex }} data-hex={s.hex} title={s.name} />
+              <div key={i} className="swatch" style={{ background: s.hex }} title={s.name} />
             ))}
           </div>
         </div>
@@ -517,6 +473,14 @@ function Rsvp({ t, lang }) {
   const [attending, setAttending] = useState("");
   const [state, setState] = useState("idle"); // idle / sending / sent / error
 
+  const options = [
+    { value: "alone",  label: t.rsvpOpt1 },
+    { value: "couple", label: t.rsvpOpt2 },
+    { value: "no",     label: t.rsvpOpt3 },
+    { value: "maybe",  label: t.rsvpOpt4 },
+  ];
+  const isAttending = attending === "alone" || attending === "couple";
+
   const onSubmit = async (e) => {
     e.preventDefault();
     if (!attending) return;
@@ -554,35 +518,48 @@ function Rsvp({ t, lang }) {
         ) : (
           <form className="reveal" onSubmit={onSubmit}>
             <div className="field">
-              <label htmlFor="rsvp-name">{t.rsvpName}</label>
-              <input id="rsvp-name" name="name" type="text" required />
+              <label htmlFor="rsvp-name-latin">{t.rsvpNameLatin}</label>
+              <input id="rsvp-name-latin" name="nameLatin" type="text" required autoComplete="name" />
+            </div>
+
+            <div className="field">
+              <label htmlFor="rsvp-name-local">{t.rsvpNameLocal}</label>
+              <input id="rsvp-name-local" name="nameLocal" type="text" required />
+            </div>
+
+            <div className="field">
+              <label htmlFor="rsvp-email">{t.rsvpEmail}</label>
+              <input id="rsvp-email" name="email" type="email" required autoComplete="email" />
+            </div>
+
+            <div className="field">
+              <label htmlFor="rsvp-phone">{t.rsvpPhone}</label>
+              <input id="rsvp-phone" name="phone" type="tel" required autoComplete="tel" />
             </div>
 
             <div className="field">
               <label>{t.rsvpAttending}</label>
-              <div className="radio-group">
-                <label className="radio-pill">
-                  <input type="radio" name="attending-r" value="yes" checked={attending === "yes"} onChange={() => setAttending("yes")} />
-                  <span className="pill">{t.rsvpYes}</span>
-                </label>
-                <label className="radio-pill">
-                  <input type="radio" name="attending-r" value="no" checked={attending === "no"} onChange={() => setAttending("no")} />
-                  <span className="pill">{t.rsvpNo}</span>
-                </label>
+              <div className="radio-group radio-group-grid">
+                {options.map((o) => (
+                  <label key={o.value} className="radio-pill">
+                    <input
+                      type="radio"
+                      name="attending-r"
+                      value={o.value}
+                      checked={attending === o.value}
+                      onChange={() => setAttending(o.value)}
+                    />
+                    <span className="pill">{o.label}</span>
+                  </label>
+                ))}
               </div>
             </div>
 
-            {attending === "yes" && (
-              <>
-                <div className="field">
-                  <label htmlFor="rsvp-plus">{t.rsvpPlusOne}</label>
-                  <input id="rsvp-plus" name="plusOne" type="text" placeholder={t.rsvpPlusOnePlaceholder} />
-                </div>
-                <div className="field">
-                  <label htmlFor="rsvp-diet">{t.rsvpDiet}</label>
-                  <textarea id="rsvp-diet" name="diet" rows={2} placeholder={t.rsvpDietPlaceholder} />
-                </div>
-              </>
+            {isAttending && (
+              <div className="field">
+                <label htmlFor="rsvp-allergy">{t.rsvpAllergy}</label>
+                <textarea id="rsvp-allergy" name="allergy" rows={2} placeholder={t.rsvpAllergyPlaceholder} />
+              </div>
             )}
 
             <div className="field">
@@ -672,6 +649,8 @@ function App() {
     try { return sessionStorage.getItem("wedding-envelope-opened") === "1"; }
     catch (e) { return false; }
   });
+  const [audioPlaying, setAudioPlaying] = useState(false);
+  const audioRef = useRef(null);
 
   const setLang = useCallback((l) => {
     setLangState(l);
@@ -687,6 +666,33 @@ function App() {
     if (desc) desc.setAttribute("content", t.pageDesc);
   }, [lang, t]);
 
+  // Start music synchronously inside envelope click so browsers accept the gesture.
+  const startAudio = useCallback(() => {
+    const el = audioRef.current;
+    if (!el) return;
+    el.volume = 0.45;
+    const p = el.play();
+    if (p && p.then) p.then(() => setAudioPlaying(true)).catch(() => setAudioPlaying(false));
+  }, []);
+
+  const toggleAudio = useCallback(() => {
+    const el = audioRef.current;
+    if (!el) return;
+    if (audioPlaying) { el.pause(); setAudioPlaying(false); }
+    else { startAudio(); }
+  }, [audioPlaying, startAudio]);
+
+  // Swap track on language change, resume if was playing
+  useEffect(() => {
+    const el = audioRef.current;
+    if (!el) return;
+    const wasPlaying = audioPlaying;
+    el.load();
+    if (wasPlaying) {
+      el.play().then(() => setAudioPlaying(true)).catch(() => setAudioPlaying(false));
+    }
+  }, [lang]);
+
   const onOpen = useCallback(() => {
     setOpened(true);
     try { sessionStorage.setItem("wedding-envelope-opened", "1"); } catch (e) {}
@@ -696,9 +702,10 @@ function App() {
 
   return (
     <>
-      {!opened && <Envelope t={t} onOpen={onOpen} />}
+      <audio ref={audioRef} src={`assets/music-${lang}.mp3`} loop preload="auto" />
+      {!opened && <Envelope t={t} onOpen={onOpen} onUserGesture={startAudio} />}
       {opened && <LangSwitcher lang={lang} setLang={setLang} />}
-      {opened && <AudioToggle lang={lang} t={t} started={opened} />}
+      {opened && <AudioToggle playing={audioPlaying} onToggle={toggleAudio} t={t} />}
 
       <Cover t={t} />
       <Greeting t={t} />

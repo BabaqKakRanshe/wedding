@@ -10,7 +10,7 @@ const COPY = {
     envSubtitle: "Прикоснитесь, чтобы открыть",
 
     // Cover
-    coverEyebrow: "Приглашение на свадьбу",
+    coverEyebrow: "Свадебное приглашение",
     bride: "Екатерина",
     groom: "Сынтек",
     coverDate: "27 · 08 · 2026",
@@ -19,7 +19,7 @@ const COPY = {
     coverScroll: "Прокрутите ниже",
 
     // Greeting
-    greetingEyebrow: "Дорогой гость",
+    greetingEyebrow: "Дорогие гости!",
     greetingTitle: "Отправимся в путешествие вместе",
     greetingText: "Приглашаем вас отправиться вместе с нами в путешествие, пунктом назначения которого станет наша свадьба. Будем счастливы, если вы проведёте этот день рядом с нами.",
 
@@ -62,7 +62,7 @@ const COPY = {
 
     // Dress code
     dressEyebrow: "Дресс-код",
-    dressTitle: "Земля и зелень",
+    dressTitle: "",
     dressText: "Мы очень старались создать красивую атмосферу этого дня и будем рады, если вы поддержите её в своих образах.",
 
     // Carousel
@@ -77,14 +77,17 @@ const COPY = {
     rsvpTitle: "Ответьте, пожалуйста",
     rsvpIntro: "Пожалуйста, ответьте на несколько вопросов — это поможет нам сделать праздник максимально комфортным для вас.",
     rsvpDeadline: "до 15 августа 2026",
-    rsvpName: "Ваше имя",
+    rsvpNameLatin: "Имя на латинице",
+    rsvpNameLocal: "Имя на русском",
+    rsvpEmail: "Email",
+    rsvpPhone: "Телефон",
     rsvpAttending: "Сможете прийти?",
-    rsvpYes: "Буду с вами",
-    rsvpNo: "К сожалению, не смогу",
-    rsvpPlusOne: "С вами кто-то ещё?",
-    rsvpPlusOnePlaceholder: "Имя спутника (необязательно)",
-    rsvpDiet: "Особенности питания",
-    rsvpDietPlaceholder: "Аллергии, ограничения — если есть",
+    rsvpOpt1: "Буду с вами",
+    rsvpOpt2: "Буду с парой",
+    rsvpOpt3: "Не смогу прийти",
+    rsvpOpt4: "Пока не уверен(а)",
+    rsvpAllergy: "Аллергии",
+    rsvpAllergyPlaceholder: "Если есть — расскажите",
     rsvpMessage: "Пожелания паре",
     rsvpMessagePlaceholder: "Несколько тёплых слов (необязательно)",
     rsvpSubmit: "Отправить ответ",
@@ -92,13 +95,13 @@ const COPY = {
     rsvpSent: "Спасибо! Ваш ответ получен.",
     rsvpError: "Не удалось отправить. Попробуйте ещё раз.",
 
-    // Gifts
-    giftsEyebrow: "О подарках",
+    // Details (was: Gifts)
+    giftsEyebrow: "Детали",
     giftsText: "Если вы планировали подарок, мы будем благодарны за любую форму внимания.",
 
     // Closing
     closingEyebrow: "До встречи на Бали",
-    closingText: "Самым главным подарком на нашей свадьбе будет ваше хорошее настроение.",
+    closingText: "Среди океана, солнца и ветра мы будем праздновать день, который для нас очень важен. И будем рады, если вы будете рядом. А если вы давно мечтали о путешествии, возможно, это идеальный повод осуществить его на Бали.",
     closingSign: "С любовью,",
 
     // Audio
@@ -158,7 +161,7 @@ const COPY = {
     venueStampBig: "Bali",
 
     dressEyebrow: "ドレスコード",
-    dressTitle: "アースとグリーン",
+    dressTitle: "",
     dressText: "この日の雰囲気を大切にしたいと思っています。皆さまの装いでも、その雰囲気を一緒につくっていただけたら嬉しいです。",
 
     carouselEyebrow: "スナップ",
@@ -171,14 +174,17 @@ const COPY = {
     rsvpTitle: "お返事をお願いします",
     rsvpIntro: "より快適に過ごしていただくために、いくつかご質問にお答えください。",
     rsvpDeadline: "2026年8月15日まで",
-    rsvpName: "お名前",
+    rsvpNameLatin: "お名前（ローマ字）",
+    rsvpNameLocal: "お名前（漢字・かな）",
+    rsvpEmail: "メールアドレス",
+    rsvpPhone: "電話番号",
     rsvpAttending: "ご出席いただけますか?",
-    rsvpYes: "出席します",
-    rsvpNo: "残念ながら欠席",
-    rsvpPlusOne: "ご同伴の方",
-    rsvpPlusOnePlaceholder: "お連れ様のお名前（任意）",
-    rsvpDiet: "食事に関するご要望",
-    rsvpDietPlaceholder: "アレルギー、制限など",
+    rsvpOpt1: "一人で参加します",
+    rsvpOpt2: "同伴者と参加します",
+    rsvpOpt3: "残念ながら欠席します",
+    rsvpOpt4: "まだ分かりません",
+    rsvpAllergy: "アレルギー",
+    rsvpAllergyPlaceholder: "ございましたらお書きください",
     rsvpMessage: "二人へのメッセージ",
     rsvpMessagePlaceholder: "温かいひとこと（任意）",
     rsvpSubmit: "送信する",
@@ -186,11 +192,11 @@ const COPY = {
     rsvpSent: "ありがとうございます！お返事を承りました。",
     rsvpError: "送信できませんでした。もう一度お試しください。",
 
-    giftsEyebrow: "ギフトについて",
+    giftsEyebrow: "詳細",
     giftsText: "もしお祝いをお考えくださっているようでしたら、どんな形でも心より感謝いたします。",
 
     closingEyebrow: "バリでお会いしましょう",
-    closingText: "私たちにとって一番のギフトは、皆さまの笑顔です。",
+    closingText: "海と太陽と風の中で、私たちにとってとても大切な一日を祝います。皆さまにそばにいていただけたら、とても嬉しいです。もし旅をずっと夢見ていらしたなら、バリ島はその夢を叶える絶好の機会かもしれません。",
     closingSign: "心を込めて、",
 
     audioOn: "音楽をオン",
@@ -249,7 +255,7 @@ const COPY = {
     venueStampBig: "Bali",
 
     dressEyebrow: "드레스 코드",
-    dressTitle: "어스 & 그린",
+    dressTitle: "",
     dressText: "이 날의 분위기를 정성껏 준비했어요. 함께 그 무드를 만들어 주신다면 정말 기쁠 거예요.",
 
     carouselEyebrow: "스냅",
@@ -262,14 +268,17 @@ const COPY = {
     rsvpTitle: "답장을 부탁드려요",
     rsvpIntro: "더 편안하게 모실 수 있도록, 몇 가지 답변 부탁드려요.",
     rsvpDeadline: "2026년 8월 15일까지",
-    rsvpName: "성함",
+    rsvpNameLatin: "성함 (영문)",
+    rsvpNameLocal: "성함 (한글)",
+    rsvpEmail: "이메일",
+    rsvpPhone: "전화번호",
     rsvpAttending: "참석 가능하신가요?",
-    rsvpYes: "참석합니다",
-    rsvpNo: "아쉽지만 못 갑니다",
-    rsvpPlusOne: "동반자가 있으신가요?",
-    rsvpPlusOnePlaceholder: "동반자 성함 (선택)",
-    rsvpDiet: "식사 관련 요청",
-    rsvpDietPlaceholder: "알레르기, 제한 사항 등",
+    rsvpOpt1: "혼자 참석합니다",
+    rsvpOpt2: "동반자와 함께 참석합니다",
+    rsvpOpt3: "아쉽지만 못 갑니다",
+    rsvpOpt4: "아직 확실하지 않아요",
+    rsvpAllergy: "알레르기",
+    rsvpAllergyPlaceholder: "있으시면 알려주세요",
     rsvpMessage: "두 사람에게 한마디",
     rsvpMessagePlaceholder: "따뜻한 한마디 (선택)",
     rsvpSubmit: "보내기",
@@ -277,11 +286,11 @@ const COPY = {
     rsvpSent: "감사합니다! 답변을 받았습니다.",
     rsvpError: "전송하지 못했습니다. 다시 시도해 주세요.",
 
-    giftsEyebrow: "선물에 관하여",
+    giftsEyebrow: "세부 사항",
     giftsText: "축하의 마음을 어떤 형태로든 전해 주신다면 진심으로 감사드립니다.",
 
     closingEyebrow: "발리에서 만나요",
-    closingText: "저희에게 가장 큰 선물은 여러분의 웃음이에요.",
+    closingText: "바다와 태양과 바람 사이에서, 우리에게 무엇보다 소중한 하루를 함께하고 싶습니다. 그 자리에 함께해 주신다면 정말 행복할 거예요. 오랫동안 여행을 꿈꿔오셨다면, 어쩌면 발리가 그 여행을 실현할 완벽한 이유가 될지도 몰라요.",
     closingSign: "사랑을 담아,",
 
     audioOn: "음악 켜기",

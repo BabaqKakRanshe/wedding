@@ -45,6 +45,7 @@ html:lang(ko) {
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
+html { overflow-x: hidden; max-width: 100vw; }
 body {
   font-family: var(--sans);
   color: var(--ink);
@@ -54,6 +55,7 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  max-width: 100vw;
 }
 
 /* paper texture */
@@ -123,7 +125,7 @@ html:lang(ja) .eyebrow, html:lang(ko) .eyebrow {
 }
 
 /* Section */
-section { position: relative; padding: 6rem 1.5rem; }
+section { position: relative; padding: 6rem 1.5rem; overflow: hidden; }
 @media (min-width: 768px) { section { padding: 8rem 2rem; } }
 .container { max-width: 1100px; margin: 0 auto; }
 .narrow { max-width: 640px; margin: 0 auto; }
@@ -366,15 +368,16 @@ section { position: relative; padding: 6rem 1.5rem; }
 }
 .cover-names {
   font-family: var(--display);
-  font-size: clamp(3.5rem, 12vw, 8.5rem);
-  line-height: 0.92;
+  font-size: clamp(2rem, 9vw, 8.5rem);
+  line-height: 0.95;
   letter-spacing: 0.01em;
   text-shadow: 0 4px 20px rgba(0,0,0,0.3);
   margin-bottom: 0.5rem;
+  white-space: nowrap;
 }
 html:lang(ja) .cover-names, html:lang(ko) .cover-names {
-  font-size: clamp(2.8rem, 9vw, 6.5rem);
-  letter-spacing: 0.08em;
+  font-size: clamp(1.7rem, 7.5vw, 6.5rem);
+  letter-spacing: 0.04em;
 }
 .cover-names .amp {
   font-style: italic;
@@ -787,38 +790,23 @@ html:lang(ja) .venue-transfer, html:lang(ko) .venue-transfer {
   border-radius: 2px;
   box-shadow: 0 24px 60px rgba(46,42,34,0.2);
 }
-.venue-image .map-frame {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, #C7D5C9, #A4BFA0);
-  overflow: hidden;
+.venue-sketch-placeholder {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, var(--paper) 0%, var(--paper-deep) 100%);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 1.5rem;
+  color: var(--ink-mute);
+  border: 1px dashed var(--line);
 }
-.venue-image .map-frame iframe { width: 100%; height: 100%; border: 0; filter: saturate(0.85) sepia(0.05); }
-.venue-image .map-pin {
-  position: absolute; top: 45%; left: 50%;
-  transform: translate(-50%, -100%);
-  pointer-events: none;
-  color: var(--terra);
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
-}
-.venue-stamp {
-  position: absolute;
-  top: -20px; right: -20px;
-  width: 110px; height: 110px;
-  border-radius: 50%;
-  background: var(--paper);
-  border: 1px dashed var(--terra);
-  display: flex; align-items: center; justify-content: center;
-  flex-direction: column;
-  font-family: var(--display);
-  color: var(--terra);
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
+.venue-sketch-note {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
-  transform: rotate(-8deg);
-  z-index: 2;
+  color: var(--ink-mute);
+  opacity: 0.6;
 }
-.venue-stamp .big { font-size: 1.5rem; font-style: italic; letter-spacing: 0.05em; text-transform: none; margin: 0.2rem 0; }
 
 /* ============================ DRESS CODE ============================ */
 .dress {
@@ -867,17 +855,6 @@ html:lang(ja) .dress-text > p, html:lang(ko) .dress-text > p { font-family: var(
   border-radius: 50%;
   position: relative;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15), inset 0 -4px 12px rgba(0,0,0,0.1);
-}
-.swatch::after {
-  content: attr(data-hex);
-  position: absolute;
-  bottom: -22px; left: 50%;
-  transform: translateX(-50%);
-  font-family: var(--sans);
-  font-size: 0.6rem;
-  color: var(--ink-mute);
-  letter-spacing: 0.05em;
-  white-space: nowrap;
 }
 
 /* ============================ CAROUSEL ============================ */
@@ -1034,6 +1011,14 @@ html:lang(ja) .field select, html:lang(ko) .field select {
 .radio-group {
   display: flex; gap: 1.5rem;
   margin-top: 0.5rem;
+}
+.radio-group-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+@media (max-width: 480px) {
+  .radio-group-grid { grid-template-columns: 1fr; gap: 0.6rem; }
 }
 .radio-pill {
   flex: 1;
